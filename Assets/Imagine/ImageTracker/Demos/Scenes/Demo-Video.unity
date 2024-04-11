@@ -1605,9 +1605,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 594817067}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: UnPause
+      - m_Target: {fileID: 594817063}
+        m_TargetAssemblyTypeName: VideoCreate, Assembly-CSharp
+        m_MethodName: PlayAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1632,9 +1632,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 594817067}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Pause
+      - m_Target: {fileID: 594817063}
+        m_TargetAssemblyTypeName: VideoCreate, Assembly-CSharp
+        m_MethodName: PauseAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

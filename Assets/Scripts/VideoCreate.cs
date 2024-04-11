@@ -7,16 +7,17 @@ public class VideoCreate : MonoBehaviour
     public Material material;
     public int index = 0;
     public bool isImageDetected;
-    
-  
+
+    private AudioSource music;
+    private float currentTime;
 
     // Start is called before the first frame update
     void Start()
     {
         RotateImages();
         isImageDetected = false;
-        GetComponent<AudioSource>().Play();
-        GetComponent<AudioSource>().Pause();
+        music = GetComponent<AudioSource>();
+        currentTime = 0;
     }
 
     public void SetImageDetectionStatus(bool status)
@@ -34,7 +35,7 @@ public class VideoCreate : MonoBehaviour
             material.mainTexture = tex;
             index++;
 
-            if (index > 413)
+            if (index > 411)
             {
                 return;
             }
@@ -44,7 +45,19 @@ public class VideoCreate : MonoBehaviour
         Invoke(nameof(RotateImages), 0.08f);
     }
 
-    
+    public void PlayAudio()
+    {
+        music.Play();
+        music.time = currentTime;
 
-   
+    }
+    public void PauseAudio()
+    {
+        currentTime = music.time;
+        music.Stop();
+    }
+
+
+
+
 }
