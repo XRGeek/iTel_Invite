@@ -11,6 +11,8 @@ public class VideoCreate : MonoBehaviour
     private AudioSource music;
     private float currentTime;
 
+    public GameObject canvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class VideoCreate : MonoBehaviour
 
             if (index > 411)
             {
+                canvas.SetActive(true);
                 return;
             }
         }
