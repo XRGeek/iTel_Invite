@@ -60,7 +60,10 @@ public class VideoCreate : MonoBehaviour
         music.Stop();
     }
 
-
+    public void OpenURL(string url)
+    {
+        Application.OpenURL(url);
+    }
 
 
 }
